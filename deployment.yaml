@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sergio/demo
+  labels:
+    app: sergio/demo
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: sergio/demo
+  template:
+    metadata:
+      labels:
+        app: sergio/demo
+    spec:
+      containers:
+        - name: sergio/demo
+          image: crmultitenant.azurecr.io/sergio/demo:latest
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sergio/demo
+spec:
+  selector:
+    app: sergio/demo
+  ports:
+    - port: 80
+      targetPort: 80
+  type: LoadBalancer
