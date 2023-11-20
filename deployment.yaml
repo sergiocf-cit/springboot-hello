@@ -23,12 +23,14 @@ spec:
             httpGet:
               path: /actuator/health
               port: 8080
-              initialDelaySeconds: 30
-          livenessProbe:
-            httpGet:
-              path: /actuator/health
-              port: 8080
-              initialDelaySeconds: 30
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            livenessProbe:
+              httpGet:
+                path: /actuator/health
+                port: 8080
+              initialDelaySeconds: 10
+              periodSeconds: 20
 
 ---
 apiVersion: v1
