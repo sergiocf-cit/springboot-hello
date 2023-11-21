@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: sergio-demo-gt
-          image: crmultitenant.azurecr.io/sergio/demo:latest
+          image: crmultitenant.azurecr.io/sergio/demo:1.0.0
           ports:
             - containerPort: 8080
           readinessProbe:
@@ -45,4 +45,4 @@ spec:
   ports:
     - port: 8080
       targetPort: 8080
-  type: LoadBalancer
+  type: ClusterIP
