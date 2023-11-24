@@ -9,7 +9,7 @@ spec:
   rules:
     - http:
         paths:
-          - pathType: Prefix
+          - pathType: ImplementationSpecific
             path: "/gt"
             backend:
               service:
@@ -17,7 +17,7 @@ spec:
                 port:
                   number: 8080
               namespace: golo-gt
-          - pathType: Prefix
+          - pathType: ImplementationSpecific
             path: "/sa"
             backend:
               service:
