@@ -1,4 +1,4 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: golo-gt
+  apiVersion: v1
+  kind: Namespace
+  metadata:
+    name: golo-gt

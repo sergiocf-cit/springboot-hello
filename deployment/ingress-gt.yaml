@@ -17,10 +17,3 @@ spec:
                 name: sergio-demo-gt
                 port:
                   number: 8080
-          - pathType: Prefix
-            path: "/sa"
-            backend:
-              service:
-                name: sergio-demo-sa
-                port:
-                  number: 8080

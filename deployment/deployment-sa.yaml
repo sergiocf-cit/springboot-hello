@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sergio-demo-sa
+  name: sergio-demo
   namespace: golo-sa
   labels:
-    app: sergio-demo-sa
+    app: sergio-demo
 spec:
-  replicas: 3
+  replicas: 5
   selector:
     matchLabels:
-      app: sergio-demo-sa
+      app: sergio-demo
   template:
     metadata:
       labels:
-        app: sergio-demo-sa
+        app: sergio-demo
     spec:
       containers:
-        - name: sergio-demo-sa
+        - name: sergio-demo
           image: crmultitenant.azurecr.io/sergio/demo:4.0.0
           ports:
             - containerPort: 8080
@@ -39,11 +39,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: sergio-demo-sa
+  name: sergio-demo
   namespace: golo-sa
 spec:
   selector:
-    app: sergio-demo-sa
+    app: sergio-demo
   ports:
     - port: 8080
       targetPort: 8080
