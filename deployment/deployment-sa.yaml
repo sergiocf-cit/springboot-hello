@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: sergio-demo-sa
+  namespace: golo-sa
   labels:
     app: sergio-demo-sa
 spec:
@@ -39,6 +40,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: sergio-demo-sa
+  namespace: golo-sa
 spec:
   selector:
     app: sergio-demo-sa
