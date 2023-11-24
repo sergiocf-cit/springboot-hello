@@ -14,6 +14,6 @@ spec:
             path: "/gt"
             backend:
               service:
-                name: sergio-demo-gt
+                name: sergio-demo
                 port:
                   number: 8080
