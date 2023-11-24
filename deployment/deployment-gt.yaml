@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: sergio-demo-gt
-          image: crmultitenant.azurecr.io/sergio/demo:1.0.0
+          image: crmultitenant.azurecr.io/sergio/demo:5.0.0
           ports:
             - containerPort: 8080
           readinessProbe:
