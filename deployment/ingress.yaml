@@ -14,14 +14,15 @@ spec:
             backend:
               service:
                 name: sergio-demo-gt
-                namespace: golo-gt
                 port:
                   number: 8080
+              namespace: golo-gt
           - pathType: Prefix
             path: "/sa"
             backend:
               service:
                 name: sergio-demo-sa
-                namespace: golo-sa
                 port:
                   number: 8080
+              namespace: golo-sa
+
