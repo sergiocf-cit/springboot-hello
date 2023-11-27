@@ -24,7 +24,7 @@ spec:
             requests:
               cpu: 100m
             limits:
-              cpu: 300m
+              cpu: 200m
           readinessProbe:
             httpGet:
               path: /actuator/health
