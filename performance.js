@@ -1,6 +1,6 @@
 const http = require('http');
 
-const url = 'http://20.124.148.108/gt/performance?loop=100000';
+const url = 'http://20.124.148.108/gt/performance?loop=1000000';
 
 function makeRequest() {
   http.get(url, (response) => {
