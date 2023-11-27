@@ -13,3 +13,8 @@ Simple project unsing Springboot, containerized and Kubernetes
 
 ### Build the image on amd64 and push to Azure Container Registry
 `docker buildx build --platform linux/amd64 -t crmultitenant.azurecr.io/sergio/demo:latest --push .`
+
+
+#TO DO
+auto scaler
+canary release per percentage
