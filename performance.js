@@ -24,4 +24,4 @@ function makeRequest() {
 makeRequest();
 
 // Set up interval to make requests every 1 second
-setInterval(makeRequest, 1000);
+setInterval(makeRequest, 100);
