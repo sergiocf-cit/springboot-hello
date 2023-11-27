@@ -22,9 +22,9 @@ spec:
             - containerPort: 8080
           resources:
             requests:
-              cpu: 2000m
+              cpu: 1000m
             limits:
-              cpu: 3000m
+              cpu: 2000m
           readinessProbe:
             httpGet:
               path: /actuator/health
