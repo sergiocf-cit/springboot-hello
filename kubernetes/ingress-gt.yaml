@@ -2,16 +2,16 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: sergio-demo-ingress
-  namespace: golo-sa
+  namespace: golo-gt
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   ingressClassName: webapprouting.kubernetes.azure.com
   rules:
     - http:
         paths:
           - pathType: Prefix
-            path: "/sa"
+            path: "/gt(/|$)(.*)"
             backend:
               service:
                 name: sergio-demo
