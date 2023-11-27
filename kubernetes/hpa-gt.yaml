@@ -17,3 +17,8 @@ spec:
         target:
           type: Utilization
           averageUtilization: 80
+  behavior:
+    scaleDown:
+      stabilizationWindowSeconds: 30  # Adjust the stabilization window as needed
+      cooldownSeconds: 30              # Adjust the cooldown period as needed
+
