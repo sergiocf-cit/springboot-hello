@@ -6,7 +6,7 @@ metadata:
   labels:
     app: sergio-demo
 spec:
-  replicas: 5
+  replicas: 2
   selector:
     matchLabels:
       app: sergio-demo
@@ -22,9 +22,9 @@ spec:
             - containerPort: 8080
           resources:
             requests:
-              cpu: 300m
+              cpu: 100m
             limits:
-              cpu: 1000m
+              cpu: 500m
           readinessProbe:
             httpGet:
               path: /actuator/health
