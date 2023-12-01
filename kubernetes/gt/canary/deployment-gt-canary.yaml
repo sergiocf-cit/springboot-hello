@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: sergio-demo-canary
-          image: crmultitenant.azurecr.io/sergio/demo:5.0.6
+          image: crmultitenant.azurecr.io/sergio/demo:5.0.8
           ports:
             - containerPort: 8080
           resources:
